@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Globalization;
+using System.Threading;
 
 namespace AppCustoViagem.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EditarPedagio : ContentPage
     {
+
         public EditarPedagio()
         {
             InitializeComponent();
@@ -20,6 +23,8 @@ namespace AppCustoViagem.View
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
+
             // Obtém qual foi o Produto anexado no BindingContext da página no momento que ela foi criada e enviada para navegação.
 
             try

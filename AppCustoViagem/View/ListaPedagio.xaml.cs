@@ -24,6 +24,7 @@ namespace AppCustoViagem.View
 
         protected override void OnAppearing()
         {
+            
             try
             {
                 lst_pedagios.ItemsSource = App.ListaPedagios;

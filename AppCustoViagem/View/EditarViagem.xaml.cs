@@ -40,7 +40,8 @@ namespace AppCustoViagem.View
             spn_custo_pedagios.Text = custo_pedagio.ToString("C");
             lbl_custo_viagem.Text = custo_viagem.ToString("C");
         }  
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e )
         {
             // Obtém qual foi o Produto anexado no BindingContext da página no momento que ela foi criada e enviada para navegação.
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
