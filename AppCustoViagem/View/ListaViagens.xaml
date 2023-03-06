@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCustoViagem.View.ListaViagens"
+               BackgroundImageSource="fundo.png">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Viagem" Clicked="ToolbarItem_Clicked1" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <RefreshView x:Name="ref_carregando" IsRefreshing="true">
+                <ListView x:Name="lst_viagens" ItemSelected="lst_viagens_ItemSelected">
+                        <ListView.Header>
+                            <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto">
+                        <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="White" Text="Origem:" />
+                        <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" TextColor="White" Text="Destino:" />
+                        <Label Grid.Row="0" Grid.Column="2" FontSize="Medium" TextColor="White" Text="Distância:" />
+                        <Label Grid.Row="0" Grid.Column="3" FontSize="Medium" TextColor="White" Text="Consumo:" />
+                        <Label Grid.Row="0" Grid.Column="4" FontSize="Medium" TextColor="White" Text="Preço Combustivel:" />
+                    </Grid>
+                        </ListView.Header>
+                <ListView.ItemTemplate>
+                    
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
+                            </ViewCell.ContextActions>
+                            
+
+                                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto">
+                                        <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" TextColor="white" Text="{Binding Origem}" />
+                                        <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" TextColor="White" Text="{Binding Destino}" />
+                                        <Label Grid.Row="0" Grid.Column="2" FontSize="Medium" TextColor="White" Text="{Binding Distancia}" />
+                                        <Label Grid.Row="0" Grid.Column="3" FontSize="Medium" TextColor="White" Text="{Binding Consumo}" />
+                                        <Label Grid.Row="0" Grid.Column="4" FontSize="Medium" TextColor="White" Text="{Binding Preco, StringFormat='{}{0:c}'}" />
+                                    </Grid>
+                             
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

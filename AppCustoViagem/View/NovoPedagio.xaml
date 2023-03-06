@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCustoViagem.View.NovoPedagio"
+             Title="Novo Pedágio"
+              BackgroundImageSource="fundo.png">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label TextColor="White" Text="Localização:" />
+            <Entry  TextColor="White" x:Name="txt_localizacao" />
+            <Label  TextColor="White" Text="Preço:" />
+            <Entry  TextColor="White" x:Name="txt_preco" />
+
+            <Button Text="Salvar" BackgroundColor="white" Margin="25" CornerRadius="10" Clicked="Button_Clicked"/>
+        </StackLayout>
+    
+    </ContentPage.Content>
+</ContentPage>

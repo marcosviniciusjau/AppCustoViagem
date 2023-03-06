@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCustoViagem.View.EditarViagem"
+                BackgroundImageSource="fundo.png">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <StackLayout Margin="30,50,30,10">
+            <Frame Margin="5" CornerRadius="10">
+                <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="Auto, *">
+                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Viagem:" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Text="Origem" />
+                    <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_origem"  Text="{Binding Origem}" TextColor="Black"/>
+
+                    <Label Grid.Column="0" Grid.Row="2" Text="Destino:" />
+                    <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_destino"   Text="{Binding Destino}" TextColor="Black"/>
+
+                    <Label Grid.Column="0" Grid.Row="3" Text="Distância:" />
+                    <Entry Grid.Column="1" Grid.Row="3" x:Name="txt_distancia"  Text="{Binding Distancia}" TextColor="Black"/>
+                </Grid>
+            </Frame>
+            <Frame Margin="5" HasShadow="True" CornerRadius="10">
+                <Grid RowDefinitions="*, *, *" ColumnDefinitions="Auto, *">
+                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Custo:" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Text="Km/L:" />
+                    <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_km_litro"  Text="{Binding Consumo}" Placeholder="Eficiência do veículo em km/L" TextColor="Black"/>
+
+                    <Label Grid.Column="0" Grid.Row="2" Text="Combustível:" />
+                    <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_preco_combustivel"  Text="{Binding Preco}" Placeholder="Preço do combustível em R$" TextColor="Black"/>
+                </Grid>
+            </Frame>
+            <Frame Margin="5" HasShadow="True" CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Custo da Viagem:" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Combustível: " />
+                                    <Span x:Name="spn_custo_combustivel" TextColor="Red"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Pedágios: " />
+                                    <Span x:Name="spn_custo_pedagios" TextColor="Red"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <Label x:Name="lbl_custo_viagem" FontSize="Title" HorizontalTextAlignment="Center" TextColor="Red" />
+
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
