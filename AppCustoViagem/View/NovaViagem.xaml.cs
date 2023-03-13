@@ -24,11 +24,8 @@ namespace AppCustoViagem.View
         {
             Navigation.PushAsync(new ListaPedagio());
         }
-
-        private async void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
-
             try
             {
                 Viagem v = new Viagem
@@ -37,8 +34,9 @@ namespace AppCustoViagem.View
                     Destino = txt_destino.Text,
                     Distancia = Convert.ToDouble(txt_distancia.Text),
                     Consumo = Convert.ToDouble(txt_km_litro.Text),
-                    Preco = Convert.ToDecimal(txt_preco_combustivel.Text)
-
+                    Preco_Combustivel = Convert.ToDecimal(txt_preco_combustivel.Text),
+                    Localizacao = txt_localizacao.Text,
+                    Preco_Pedagio = Convert.ToDecimal(txt_preco_pedagio.Text)
                 };
 
                 App.ListaViagens.Add(v);
@@ -52,12 +50,14 @@ namespace AppCustoViagem.View
                 _ = Navigation.PushAsync(new ListaViagens());
             }
             catch (Exception ex)
-            { 
-                await DisplayAlert("Ops", ex.Message, "OK"); 
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
             }
+        }
 
-        
-        
+
+        private async void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        {
             double distancia = Convert.ToDouble(txt_distancia.Text);
             double preco_combustivel = Convert.ToDouble(txt_preco_combustivel.Text);
             double km_litro = Convert.ToDouble(txt_km_litro.Text);

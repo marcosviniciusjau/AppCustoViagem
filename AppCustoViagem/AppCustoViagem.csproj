@@ -17,21 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\ListaPedagio.xaml.cs">
-      <DependentUpon>ListaPedagio.xaml</DependentUpon>
-    </Compile>
     <Compile Update="View\NovaViagem.xaml.cs">
       <DependentUpon>NovaViagem</DependentUpon>
-    </Compile>
-    <Compile Update="View\NovoPedagio.xaml.cs">
-      <DependentUpon>NovoPedagio.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="View\EditarPedagio.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="View\EditarViagem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

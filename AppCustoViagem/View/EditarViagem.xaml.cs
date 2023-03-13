@@ -12,14 +12,14 @@ using System.Threading;
 
 namespace AppCustoViagem.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 
-	public partial class EditarViagem : ContentPage
-	{
-		public EditarViagem ()
-		{
-			InitializeComponent ();
-		}
+    public partial class EditarViagem : ContentPage
+    {
+        public EditarViagem()
+        {
+            InitializeComponent();
+        }
 
         private void ToolbarItem_Clicked_1(object sender, EventArgs e)
         {
@@ -39,9 +39,9 @@ namespace AppCustoViagem.View
             spn_custo_combustivel.Text = custo_combustivel.ToString("C");
             spn_custo_pedagios.Text = custo_pedagio.ToString("C");
             lbl_custo_viagem.Text = custo_viagem.ToString("C");
-        }  
+        }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e )
+        private void Button_Clicked(object sender, EventArgs e)
         {
             // Obtém qual foi o Produto anexado no BindingContext da página no momento que ela foi criada e enviada para navegação.
             Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
@@ -58,7 +58,10 @@ namespace AppCustoViagem.View
                     Destino = txt_destino.Text,
                     Distancia = Convert.ToDouble(txt_distancia.Text),
                     Consumo = Convert.ToDouble(txt_km_litro.Text),
-                    Preco = Convert.ToDecimal(txt_preco_combustivel.Text)
+                    Preco_Combustivel = Convert.ToDecimal(txt_preco_combustivel.Text),
+                    Localizacao = txt_localizacao.Text,
+                    Preco_Pedagio = Convert.ToDecimal(txt_preco_pedagio.Text)
+
                 };
 
                 //Aqui atualizará o banco de dados com as novas informações da model
@@ -66,15 +69,13 @@ namespace AppCustoViagem.View
 
                 DisplayAlert("Sucesso!", "Viagem Editada", "OK");
 
-                Navigation.PushAsync(new ListaViagens());
+                Navigation.PopAsync();
             }
             catch (Exception ex)
             {
                 DisplayAlert("Ops", ex.Message, "OK");
             }
-
-       
         }
+
     }
-    
 }
