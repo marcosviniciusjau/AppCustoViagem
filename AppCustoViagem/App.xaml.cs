@@ -33,7 +33,6 @@ namespace AppCustoViagem
         }
 
 
-        public static ObservableCollection<Pedagio> ListaPedagios = new ObservableCollection<Pedagio>();
         public static ObservableCollection<Viagem> ListaViagens = new ObservableCollection<Viagem>();
 
         public App()

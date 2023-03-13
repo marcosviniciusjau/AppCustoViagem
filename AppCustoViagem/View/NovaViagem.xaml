@@ -20,13 +20,13 @@
                         <Label Grid.Column="0" Grid.Row="0"  Text="Viagem:"  TextColor="Black"/>
 
                         <Label Grid.Column="0" Grid.Row="1" Text="Origem"  TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_origem"  TextColor="Black"/>
+                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_origem" Keyboard="Text" TextColor="Black"/>
 
                         <Label Grid.Column="0" Grid.Row="2" Text="Destino:"  TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_destino" TextColor="Black"/>
+                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_destino" Keyboard="Text" TextColor="Black"/>
 
                         <Label Grid.Column="0" Grid.Row="3" Text="Distância:"  TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="3" x:Name="txt_distancia" TextColor="Black"/>
+                        <Entry Grid.Column="1" Grid.Row="3" x:Name="txt_distancia" Keyboard="Numeric" TextColor="Black"/>
                     </Grid>
                 </Frame>
                 <Frame Margin="5" HasShadow="True" CornerRadius="10">
@@ -34,10 +34,10 @@
                         <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Custo:" TextColor="Black"/>
 
                         <Label Grid.Column="0" Grid.Row="1" Text="Km/L:" TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_km_litro" Placeholder="Eficiência do veículo em km/L" TextColor="Black"/>
+                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_km_litro" Keyboard="Numeric" Placeholder="Eficiência do veículo em km/L" TextColor="Black"/>
 
                         <Label Grid.Column="0" Grid.Row="2" Text="Combustível:" TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_preco_combustivel" Placeholder="Preço do combustível em R$" TextColor="Black"/>
+                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_preco_combustivel" Placeholder="Preço Combustível em R$" TextColor="Black"/>
                     </Grid>
                 </Frame>
                 <Frame Margin="5" HasShadow="True" CornerRadius="10">
@@ -45,7 +45,7 @@
                         <Label Grid.Column="0" Grid.Row="0"   TextColor="Black" Text="Pedágio:" />
 
                         <Label Grid.Column="0" Grid.Row="1" TextColor="Black" Text="Localização:" />
-                        <Entry Grid.Column="1" Grid.Row="1" TextColor="Black" x:Name="txt_localizacao" />
+                        <Entry Grid.Column="1" Grid.Row="1" TextColor="Black" Keyboard="Text" x:Name="txt_localizacao" />
                         <Label Grid.Column="0" Grid.Row="2" TextColor="Black" Text="Preço:" />
                         <Entry  Grid.Column="1" Grid.Row="2" TextColor="Black" x:Name="txt_preco_pedagio" />
 

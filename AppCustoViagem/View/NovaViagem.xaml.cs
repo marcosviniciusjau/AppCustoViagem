@@ -20,10 +20,7 @@ namespace AppCustoViagem.View
             InitializeComponent();
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ListaPedagio());
-        }
+   
         private async void Button_Clicked(object sender, EventArgs e)
         {
             try
@@ -65,7 +62,7 @@ namespace AppCustoViagem.View
             double custo_combustivel = (distancia / km_litro) * preco_combustivel;
 
             // Calculando valor do pedágio com LINQ
-            double custo_pedagio = (double)App.ListaPedagios.Sum(i => i.Valor);
+            double custo_pedagio = Convert.ToDouble(txt_preco_pedagio.Text);
 
             // Custo total da viagem
             double custo_viagem = custo_combustivel + custo_pedagio;

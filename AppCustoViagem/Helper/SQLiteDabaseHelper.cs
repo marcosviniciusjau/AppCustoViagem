@@ -45,8 +45,14 @@ namespace AppCustoViagem.Helper
         }
 
 
+        public Task<List<Viagem>> Search(string q)
+        {
+            string sql = "SELECT * FROM Viagem WHERE Origem LIKE '%" + q + "%'";
 
-    
+            return _conn.QueryAsync<Viagem>(sql);
+        }
+
+
 
         public Task<List<Viagem>> GetAllRows()
         {

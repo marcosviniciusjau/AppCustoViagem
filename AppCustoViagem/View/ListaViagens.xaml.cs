@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +14,6 @@ namespace AppCustoViagem.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListaViagens : ContentPage
     {
-     
         public ListaViagens()
         {
             InitializeComponent();
@@ -24,12 +24,40 @@ namespace AppCustoViagem.View
             Navigation.PushAsync(new NovaViagem());
         }
 
+        public string ParametroBusca { get; set; }
+
+        public ICommand Buscar
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    try
+                    {
+                 
+                        List<Viagem> tmp = await App.Database.Search(ParametroBusca);
+
+                     
+                        tmp.ForEach(i => App.ListaViagens.Add(i));
+
+                    }
+                    catch (Exception ex)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Ops", ex.Message, "OK");
+                    }
+
+                });
+            }
+        }
+
         protected override void OnAppearing()
         {
             try
             {
-                lst_viagens.ItemsSource = App.ListaViagens;
                 ref_carregando.IsRefreshing = false;
+
+                lst_viagens.ItemsSource = App.ListaViagens;
+            
 
             }
             catch (Exception ex)
