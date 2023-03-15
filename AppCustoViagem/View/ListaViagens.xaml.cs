@@ -24,31 +24,7 @@ namespace AppCustoViagem.View
             Navigation.PushAsync(new NovaViagem());
         }
 
-        public string ParametroBusca { get; set; }
-
-        public ICommand Buscar
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                    try
-                    {
-                 
-                        List<Viagem> tmp = await App.Database.Search(ParametroBusca);
-
-                     
-                        tmp.ForEach(i => App.ListaViagens.Add(i));
-
-                    }
-                    catch (Exception ex)
-                    {
-                        await Application.Current.MainPage.DisplayAlert("Ops", ex.Message, "OK");
-                    }
-
-                });
-            }
-        }
+      
 
         protected override void OnAppearing()
         {

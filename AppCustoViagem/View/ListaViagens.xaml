@@ -9,10 +9,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout Orientation="Horizontal">
-            <SearchBar Placeholder="Busque por Descrição" Text="{Binding ParametroBusca }" />
-            <Button Text="Buscar" Command="{Binding Buscar}" />
-
+      
             <StackLayout>
                 <RefreshView x:Name="ref_carregando" IsRefreshing="true">
                     <ListView x:Name="lst_viagens" ItemSelected="lst_viagens_ItemSelected">
@@ -48,6 +45,6 @@
                     </ListView>
                 </RefreshView>
             </StackLayout>
-        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
