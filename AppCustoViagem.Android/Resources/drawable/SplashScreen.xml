@@ -10,7 +10,9 @@
 
   <item>
 
-
+ <bitmap android:src="@drawable/splash_screen"
+				android:tileMode="disabled"
+				android:gravity="center"/>
  
 
 

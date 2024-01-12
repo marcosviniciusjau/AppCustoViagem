@@ -1,4 +1,4 @@
-﻿using AppCustoViagem.Model;
+﻿
 using AppCustoViagem.View;
 using Xamarin.Forms;
 using System.IO;

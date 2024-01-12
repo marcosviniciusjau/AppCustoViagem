@@ -5,7 +5,7 @@
                BackgroundImageSource="fundo.png">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Viagem" Clicked="ToolbarItem_Clicked1" />
+        <ToolbarItem Text="Nova Viagem" Clicked="ToolbarItem_Clicked1" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>

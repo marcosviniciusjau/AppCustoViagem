@@ -1,5 +1,4 @@
 ﻿
-using AppCustoViagem.Model;
 
 
 using SQLite;

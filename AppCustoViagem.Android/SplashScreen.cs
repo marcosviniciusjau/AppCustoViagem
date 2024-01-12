@@ -12,7 +12,7 @@ using System.Text;
 
 namespace AppCustoViagem.Droid
 {
-    [Activity(Label = "Custo Viagem", // Nome do Aplicativo.
+    [Activity(Label = "Aventuras em Conta", // Nome do Aplicativo.
               Theme = "@style/MainTheme.SplashScreen", // Tema feito especificamente à Splash Screen.
               MainLauncher = true, /* Define que essa activity é a principal. Como essa é a principal, devemos ir ao arquivo
                                     * "MainActivity" e habilitar esta mesma propriedade como false, senão serão compilados, no

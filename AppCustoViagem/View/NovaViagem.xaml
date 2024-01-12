@@ -2,12 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCustoViagem.View.NovaViagem"
-             Title="Dados Da Viagem"
-                 BackgroundImageSource="fundo.png"
-                 >
-
+             BackgroundImageSource="fundo.png"
+             >
 
     <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="viagem_icon.png" />
         <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1"/>
         <ToolbarItem Text="Viagens" Clicked="ToolbarItem_Clicked_2" />
     </ContentPage.ToolbarItems>
@@ -15,43 +14,43 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="30,5,30,10">
-                <Frame Margin="5" CornerRadius="10" Opacity="10">
-                    <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="Auto, *" Opacity="100">
-                        <Label Grid.Column="0" Grid.Row="0"  Text="Viagem:"  TextColor="Black"/>
+                <Frame Margin="5" CornerRadius="10" BackgroundColor="#FFA048">
+                    <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="Auto, *" Opacity="100" BackgroundColor="Transparent">
+                        <Label Grid.Column="0" Grid.Row="0"  Text="Viagem:"  TextColor="White"/>
 
-                        <Label Grid.Column="0" Grid.Row="1" Text="Origem"  TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_origem" Keyboard="Text" TextColor="Black"/>
+                        <Label Grid.Column="0" Grid.Row="1" Text="Origem"  TextColor="White"/>
+                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_origem" Keyboard="Text" TextColor="White" BackgroundColor="Transparent"/>
 
-                        <Label Grid.Column="0" Grid.Row="2" Text="Destino:"  TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_destino" Keyboard="Text" TextColor="Black"/>
+                        <Label Grid.Column="0" Grid.Row="2" Text="Destino:"  TextColor="White"/>
+                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_destino" Keyboard="Text" TextColor="White"/>
 
-                        <Label Grid.Column="0" Grid.Row="3" Text="Distância:"  TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="3" x:Name="txt_distancia" Keyboard="Numeric" TextColor="Black"/>
+                        <Label Grid.Column="0" Grid.Row="3" Text="Distância:"  TextColor="White"/>
+                        <Entry Grid.Column="1" Grid.Row="3" x:Name="txt_distancia" Keyboard="Numeric" TextColor="White"/>
                     </Grid>
                 </Frame>
-                <Frame Margin="5" HasShadow="True" CornerRadius="10">
+                <Frame Margin="5" HasShadow="True" CornerRadius="10"  BackgroundColor="#FFA048">
                     <Grid RowDefinitions="*, *, *" ColumnDefinitions="Auto, *">
-                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Custo:" TextColor="Black"/>
+                        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Custo:" TextColor="White"/>
 
-                        <Label Grid.Column="0" Grid.Row="1" Text="Km/L:" TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_km_litro" Keyboard="Numeric" Placeholder="Eficiência do veículo em km/L" TextColor="Black"/>
+                        <Label Grid.Column="0" Grid.Row="1" Text="Km/L:" TextColor="White"/>
+                        <Entry Grid.Column="1" Grid.Row="1" x:Name="txt_km_litro" Keyboard="Numeric" Placeholder="Eficiência do veículo em km/L" TextColor="White"/>
 
-                        <Label Grid.Column="0" Grid.Row="2" Text="Combustível:" TextColor="Black"/>
-                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_preco_combustivel" Placeholder="Preço Combustível em R$" TextColor="Black"/>
+                        <Label Grid.Column="0" Grid.Row="2" Text="Combustível:" TextColor="White"/>
+                        <Entry Grid.Column="1" Grid.Row="2" x:Name="txt_preco_combustivel" Placeholder="Preço Combustível em R$" TextColor="White"/>
                     </Grid>
                 </Frame>
-                <Frame Margin="5" HasShadow="True" CornerRadius="10">
+                <Frame Margin="5" HasShadow="True" CornerRadius="10" BackgroundColor="#FFA048">
                     <Grid RowDefinitions="*, *, *" ColumnDefinitions="Auto, *">
-                        <Label Grid.Column="0" Grid.Row="0"   TextColor="Black" Text="Pedágio:" />
+                        <Label Grid.Column="0" Grid.Row="0"   TextColor="White" Text="Pedágio:" />
 
-                        <Label Grid.Column="0" Grid.Row="1" TextColor="Black" Text="Localização:" />
-                        <Entry Grid.Column="1" Grid.Row="1" TextColor="Black" Keyboard="Text" x:Name="txt_localizacao" />
-                        <Label Grid.Column="0" Grid.Row="2" TextColor="Black" Text="Preço:" />
-                        <Entry  Grid.Column="1" Grid.Row="2" TextColor="Black" x:Name="txt_preco_pedagio" />
+                        <Label Grid.Column="0" Grid.Row="1" TextColor="White" Text="Localização:" />
+                        <Entry Grid.Column="1" Grid.Row="1" TextColor="White" Keyboard="Text" x:Name="txt_localizacao" />
+                        <Label Grid.Column="0" Grid.Row="2" TextColor="White" Text="Preço:" />
+                        <Entry  Grid.Column="1" Grid.Row="2" TextColor="White" x:Name="txt_preco_pedagio" />
 
                     </Grid>
                 </Frame>
-                <Button Text="Salvar" Grid.Column="1" Grid.Row="3" BackgroundColor="#FF70CDF4"  TextColor="#FFD74F46" CornerRadius="10" Clicked="Button_Clicked"/>
+                <Button Text="Salvar" Grid.Column="1" Grid.Row="3" BackgroundColor="white"  TextColor="#FFA048" CornerRadius="50" Clicked="Button_Clicked"/>
 
                 <Frame Margin="5" HasShadow="True" CornerRadius="10">
                     <StackLayout>
