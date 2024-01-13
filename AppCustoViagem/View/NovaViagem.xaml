@@ -7,8 +7,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="viagem_icon.png" />
-        <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1"/>
-        <ToolbarItem Text="Viagens" Clicked="ToolbarItem_Clicked_2" />
+         <ToolbarItem Text="Viagens" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -51,6 +50,7 @@
                     </Grid>
                 </Frame>
                 <Button Text="Salvar" Grid.Column="1" Grid.Row="3" BackgroundColor="white"  TextColor="#FFA048" CornerRadius="50" Clicked="Button_Clicked"/>
+                <Button Text="Somar" Grid.Column="1" Grid.Row="4" BackgroundColor="white"  TextColor="#FFA048" CornerRadius="50" Clicked="Button_Clicked_1"/>
 
                 <Frame Margin="5" HasShadow="True" CornerRadius="10">
                     <StackLayout>

@@ -67,7 +67,7 @@
 
                     </Grid>
                 </Frame>
-                <Button Text="Salvar" Grid.Column="1" Grid.Row="3" BackgroundColor="#FF70CDF4"  TextColor="#FFD74F46" CornerRadius="10" Clicked="Button_Clicked"/>
+                <Button Text="Salvar" Grid.Column="1" Grid.Row="3" BackgroundColor="#FFA048"  TextColor="#FFD74F46" CornerRadius="10" Clicked="Button_Clicked"/>
 
                 <Frame Style="{StaticResource Margin}">
                     <StackLayout>

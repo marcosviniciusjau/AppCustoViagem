@@ -53,7 +53,7 @@ namespace AppCustoViagem.View
         }
 
 
-        private async void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        private void Button_Clicked_1(object sender, EventArgs e)
         {
             double distancia = Convert.ToDouble(txt_distancia.Text);
             double preco_combustivel = Convert.ToDouble(txt_preco_combustivel.Text);
@@ -73,7 +73,8 @@ namespace AppCustoViagem.View
             lbl_custo_viagem.Text = custo_viagem.ToString("C");
         }
 
-        private void ToolbarItem_Clicked_2(object sender, EventArgs e)
+
+        private void ToolbarItem_Clicked (object sender, EventArgs e)
         {
             Navigation.PushAsync(new ListaViagens());
         }
